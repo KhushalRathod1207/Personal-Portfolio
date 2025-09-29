@@ -1,0 +1,185 @@
+{
+  "data": {
+    "fullName": "Khushal Rathod",
+    "logo": "logo.png",
+    "email": "Khushalr010@gmail.com",
+    "titleArray": [
+      "Full-Stack Web Developer",
+      "Software Developer",
+      "Java & Python Coder",
+      "Computer Science Enthusiast"
+    ],
+    "subTitle": "BCA student, full-stack developer in the making, and a curious problem solver. When I’m not coding, I’m learning how to debug life itself!",
+    "resumeLink": "https://drive.google.com/file/d/1E2GOMxbkiHZF1G69kAoFcEtGyvUBkpcD/view?usp=drive_link",
+    "aboutDescription": [
+      "Hi! I'm Khushal, a passionate full-stack web developer and BCA student from Surat, India.",
+      "I specialize in MERN stack development with a solid foundation in Java, Python, and C.",
+      "I’ve worked on both frontend and backend projects, from building responsive web apps to designing REST APIs.",
+      "With internship experience at Prodigy InfoTech and Kodbud InfoTech, I’ve gained exposure to real-world workflows, Git/GitHub, debugging, and scalable backend systems.",
+      "I love blending clean design with strong development practices to create seamless digital experiences.",
+      "Check out my portfolio below and let’s connect for exciting collaborations!"
+    ],
+    "aboutImage": "MP.jpg",
+    "skills": [
+      {
+        "title": "Frontend",
+        "skillname": [
+          {
+            "name": "React",
+            "image": "react"
+          },
+          {
+            "name": "HTML",
+            "image": "html"
+          },
+          {
+            "name": "CSS",
+            "image": "css"
+          },
+          {
+            "name": "JavaScript",
+            "image": "javascript"
+          },
+          {
+            "name": "BootStrap",
+            "image": "bs"
+          }
+        ]
+      },
+      {
+        "title": "Backend",
+        "skillname": [
+          {
+            "name": "Node Js",
+            "image": "node"
+          },
+          {
+            "name": "Express Js",
+            "image": "express"
+          },
+          {
+            "name": "MongoDB",
+            "image": "mdb"
+          },
+          {
+            "name": "SQL",
+            "image": "mysql"
+          }
+        ]
+      },
+      {
+        "title": "Others",
+        "skillname": [
+          {
+            "name": "Java",
+            "image": "java"
+          },
+          {
+            "name": "Python",
+            "image": "py"
+          },
+          {
+            "name": "C",
+            "image": "c"
+          },
+          {
+            "name": "Git",
+            "image": "git"
+          },
+          {
+            "name": "GitHub",
+            "image": "github"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "projectName": "Wanderlust",
+        "projectType": "Travel Booking Website",
+        "projectImage": [
+          "Project1/01image.png"
+        ],
+        "techStack": [
+          {
+            "name": "React",
+            "image": "react"
+          },
+          {
+            "name": "Node Js",
+            "image": "node"
+          },
+          {
+            "name": "Express Js",
+            "image": "express"
+          },
+          {
+            "name": "MongoDB",
+            "image": "mdb"
+          }
+        ],
+        "description": "A full-stack travel booking platform with authentication, profile management, and responsive listings.",
+        "githubLink": "https://github.com/KhushalRathod1207/Wanderlust",
+        "liveLink": ""
+      },
+      {
+        "projectName": "Zerodha Dashboard Clone",
+        "projectType": "Stock Trading Dashboard",
+        "projectImage": [
+          "Project2/01image.png"
+        ],
+        "techStack": [
+          {
+            "name": "React",
+            "image": "react"
+          },
+          {
+            "name": "Node Js",
+            "image": "node"
+          },
+          {
+            "name": "Express Js",
+            "image": "express"
+          },
+          {
+            "name": "MongoDB",
+            "image": "mdb"
+          }
+        ],
+        "description": "A stock trading dashboard clone featuring real-time data display, portfolio, and order management.",
+        "githubLink": "https://github.com/KhushalRathod1207/Zerodha",
+        "liveLink": ""
+      },
+      {
+        "projectName": "Taskify",
+        "projectType": "Task Management App",
+        "projectImage": [
+          "Project3/01image.png"
+        ],
+        "techStack": [
+          {
+            "name": "React",
+            "image": "react"
+          },
+          {
+            "name": "PHP",
+            "image": "php"
+          },
+          {
+            "name": "MySQL",
+            "image": "mysql"
+          }
+        ],
+        "description": "A task management system with authentication, task creation, and deadline tracking.",
+        "githubLink": "https://github.com/KhushalRathod1207/Taskify",
+        "liveLink": ""
+      }
+    ],
+    "contactParagraph": "I’m currently open to internships and freelance opportunities. Let’s connect if you’d like to work together!",
+    "socialLinks": {
+      "github": "https://github.com/KhushalRathod1207",
+      "linkedin": "https://linkedin.com/in/khushal-rathod",
+      "instagram": ""
+    }
+  }
+}
