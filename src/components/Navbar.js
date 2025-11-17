@@ -1,85 +1,146 @@
-import React from 'react'
-import { NavHashLink } from 'react-router-hash-link';
+import React from "react";
+import { NavHashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import data from '../data/data.json'
+import { motion } from "framer-motion";
+import data from "../data/data.json";
 
 function Navbar() {
+    const location = useLocation();
+    const { fullName, logo, email, socialLinks } = data.data;
 
-    let location = useLocation();
+    const imagepath = "/images/logo/";
 
-    const { fullName, logo, email, socialLinks } = data.data
-
-    const imagepath = "/images/logo/"
+    // Animation for navbar fade-in
+    const navVariants = {
+        hidden: { y: -40, opacity: 0 },
+        visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
+    };
 
     return (
-        <div>
-            <div className='fixed-top'>
+        <div className="fixed-top">
 
-                <nav className="navbar navbar-expand-lg row" style={{ background: '#1D1D23', padding: '17px' }} data-bs-theme="dark">
-                    <div className="container-fluid">
-                        <a className="navbar-brand p-0" href="#">
-                            <img
-                                src={imagepath + logo}
-                                alt="RK - logo"
-                                className='me-2 nav-logo'
-                            />
-                            {fullName}
-                        </a>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup"
-                            aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon" />
-                        </button>
-                        <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" style={{ fontSize: '17px', marginTop: '10px' }}>
-                            <div className="navbar-nav">
-                                <NavHashLink className={`${location.pathname}${location.hash}` === `/#top` ? "active1 nav-link mx-2" : `${location.pathname}${location.hash}` === `/` ? "active1 nav-link mx-2" : "nav-link mx-2"} to="#top">
-                                    Home
-                                </NavHashLink>
-                                <NavHashLink className={`${location.pathname}${location.hash}` === `/#about` ? "active1 nav-link mx-2" : "nav-link mx-2"} to="#about">
-                                    About
-                                </NavHashLink>
-                                <NavHashLink className={`${location.pathname}${location.hash}` === `/#skills` ? "active1 nav-link mx-2" : "nav-link mx-2"} to="#skills">
-                                    Skills
-                                </NavHashLink>
-                                <NavHashLink className={`${location.pathname}${location.hash}` === `/#projects` ? "active1 nav-link mx-2" : "nav-link mx-2"} to="#projects">
-                                    Projects
-                                </NavHashLink>
-                                <NavHashLink className={`${location.pathname}${location.hash}` === `/#contact` ? "active1 nav-link mx-2" : "nav-link mx-2"} to="#contact">
-                                    Contact
-                                </NavHashLink>
-                                <button class="btn hire-btn mx-2" style={{ borderRadius: '5%' }} type="submit"> <a className="hire-a" href={`mailto:` + email}>Hire Me</a> </button>
-                            </div>
+            {/* Animated Navbar */}
+            <motion.nav
+                className="navbar navbar-expand-lg"
+                style={{ background: "#1D1D23", padding: "16px" }}
+                data-bs-theme="dark"
+                variants={navVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <div className="container-fluid">
+
+                    {/* Logo + Name */}
+                    <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        className="navbar-brand d-flex align-items-center gap-2"
+                        href="#"
+                    >
+                        <img
+                            src={imagepath + logo}
+                            alt="Logo"
+                            style={{ height: "35px" }}
+                        />
+                        <span className="fw-bold">{fullName}</span>
+                    </motion.a>
+
+                    {/* Toggler */}
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    {/* Nav Items */}
+                    <div
+                        className="collapse navbar-collapse justify-content-end"
+                        id="navbarNavAltMarkup"
+                    >
+                        <div className="navbar-nav text-center">
+
+                            {/* List Items */}
+                            {[
+                                { link: "#top", label: "Home" },
+                                { link: "#about", label: "About" },
+                                { link: "#skills", label: "Skills" },
+                                { link: "#projects", label: "Projects" },
+                                { link: "#contact", label: "Contact" }
+                            ].map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    whileHover={{ scale: 1.08 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <NavHashLink
+                                        className="nav-link mx-2 fw-semibold"
+                                        to={item.link}
+                                        style={{
+                                            color:
+                                                `${location.pathname}${location.hash}` ===
+                                                    `/${item.link}`
+                                                    ? "#0d6efd"
+                                                    : "#ffffff",
+                                            transition: "0.3s"
+                                        }}
+                                    >
+                                        {item.label}
+                                    </NavHashLink>
+                                </motion.div>
+                            ))}
+
+                            {/* Hire Me Button */}
+                            <motion.a
+                                href={`mailto:` + email}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="btn btn-primary mx-2"
+                                style={{ borderRadius: "6px" }}
+                            >
+                                Hire Me
+                            </motion.a>
                         </div>
                     </div>
-                </nav>
-            </div>
-
-            <div id="contact-left">
-                {/* <div id="contact-line" /> */}
-                <div id="contact-left-links">
-                    <a target='_blank' href={socialLinks.github}>
-                        <i className="fab fa-github" />
-                    </a>
-                    <a target='_blank' href={socialLinks.linkedin}>
-                        <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a target='_blank' href={`mailto:` + email}>
-                        <i className="fas fa-envelope" />
-                    </a>
-                    <a target='_blank' href={socialLinks.instagram}>
-                        <i className="fab fa-instagram" />
-                    </a>
                 </div>
-                <div id="contact-line" />
-            </div>
+            </motion.nav>
+
+            {/* Social Icons Left Side */}
+            <motion.div
+                className="position-fixed d-flex flex-column align-items-center"
+                style={{ top: "40%", left: "15px", gap: "18px" }}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+            >
+                {[
+                    { icon: "fab fa-github", link: socialLinks.github },
+                    { icon: "fab fa-linkedin-in", link: socialLinks.linkedin },
+                    { icon: "fas fa-envelope", link: "mailto:" + email },
+                    { icon: "fab fa-instagram", link: socialLinks.instagram }
+                ].map((item, index) => (
+                    <motion.a
+                        href={item.link}
+                        target="_blank"
+                        key={index}
+                        whileHover={{ scale: 1.3 }}
+                        className="text-white fs-4"
+                    >
+                        <i className={item.icon}></i>
+                    </motion.a>
+                ))}
+
+                <div
+                    style={{
+                        width: "2px",
+                        height: "80px",
+                        background: "#fff",
+                        marginTop: "10px"
+                    }}
+                />
+            </motion.div>
         </div>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

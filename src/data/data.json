@@ -2,24 +2,26 @@
   "data": {
     "fullName": "Khushal Rathod",
     "logo": "logo.png",
-    "email": "Khushalr010@gmail.com",
+    "email": "khushalr010@gmail.com",
     "titleArray": [
       "Full-Stack Web Developer",
       "Software Developer",
+      "Data Analyst & Scientist",
       "Java & Python Coder",
       "Computer Science Enthusiast"
     ],
     "subTitle": "BCA student, full-stack developer in the making, and a curious problem solver. When I’m not coding, I’m learning how to debug life itself!",
-    "resumeLink": "https://drive.google.com/file/d/1E2GOMxbkiHZF1G69kAoFcEtGyvUBkpcD/view?usp=drive_link",
+    "resumeLink": "https://drive.google.com/file/d/1Et0oRS13bNnOAp3tlx6Z2OKEm5KRby14/view?usp=sharing",
     "aboutDescription": [
-      "Hi! I'm Khushal, a passionate full-stack web developer and BCA student from Surat, India.",
-      "I specialize in MERN stack development with a solid foundation in Java, Python, and C.",
-      "I’ve worked on both frontend and backend projects, from building responsive web apps to designing REST APIs.",
-      "With internship experience at Prodigy InfoTech and Kodbud InfoTech, I’ve gained exposure to real-world workflows, Git/GitHub, debugging, and scalable backend systems.",
-      "I love blending clean design with strong development practices to create seamless digital experiences.",
-      "Check out my portfolio below and let’s connect for exciting collaborations!"
+      "Hi! I'm Khushal, a dedicated full-stack web developer and BCA student from Surat, India.",
+      "I specialize in MERN stack development, with strong knowledge in Java, Python, and C programming.",
+      "I have hands-on experience building responsive web applications, integrating REST APIs, and designing scalable backend systems.",
+      "I worked as a Full Stack Intern at DG Interns Hub where I built MERN applications, collaborated with teams, and improved performance of web apps.",
+      "During my Web Developer internship at Prodigy InfoTech, I developed responsive UI, improved debugging skills, and worked with Git/GitHub.",
+      "I enjoy writing clean code, optimizing UI/UX, and creating meaningful digital experiences.",
+      "Let’s connect and build something amazing together!"
     ],
-    "aboutImage": "MP.jpg",
+    "aboutImage": "MP.png",
     "skills": [
       {
         "title": "Frontend",
@@ -79,10 +81,6 @@
             "image": "py"
           },
           {
-            "name": "C",
-            "image": "c"
-          },
-          {
             "name": "Git",
             "image": "git"
           },
@@ -95,7 +93,7 @@
     ],
     "projects": [
       {
-        "projectName": "Wanderlust",
+        "projectName": "Wanderlust – Holiday Rentals (Cabins, Beach Houses & More)",
         "projectType": "Travel Booking Website",
         "projectImage": [
           "Project1/01image.png"
@@ -118,12 +116,12 @@
             "image": "mdb"
           }
         ],
-        "description": "A full-stack travel booking platform with authentication, profile management, and responsive listings.",
-        "githubLink": "https://github.com/KhushalRathod1207/Wanderlust",
-        "liveLink": ""
+        "description": "Wanderlust is a full-stack holiday rental platform where users can browse and book vacation stays, while hosts can list and manage their properties. It includes a modern frontend and a secure backend for listings, authentication, and bookings.",
+        "githubLink": "https://github.com/KhushalRathod1207/Wanderlust_Holiday_rentals-cabins-beach_houses_more",
+        "liveLink": "https://wanderlust-holiday-rentals-cabins-b.vercel.app/"
       },
       {
-        "projectName": "Zerodha Dashboard Clone",
+        "projectName": "Zerodha — Online Stock Brokerage Platform for Trading and Investing",
         "projectType": "Stock Trading Dashboard",
         "projectImage": [
           "Project2/01image.png"
@@ -146,9 +144,9 @@
             "image": "mdb"
           }
         ],
-        "description": "A stock trading dashboard clone featuring real-time data display, portfolio, and order management.",
-        "githubLink": "https://github.com/KhushalRathod1207/Zerodha",
-        "liveLink": ""
+        "description": "A frontend–backend clone of the Zerodha trading platform that simulates online stock trading and investing. The project includes user interface pages and basic functionalities similar to Zerodha, giving users an experience of viewing stocks, placing orders, and navigating a brokerage platform.",
+        "githubLink": "https://github.com/KhushalRathod1207/Zerodha-Online-stock-brokerage-platform-for-trading-and-investing-in-stocks",
+        "liveLink": "https://zerodha-online-stock-brokerage-plat.vercel.app/"
       },
       {
         "projectName": "Taskify",
